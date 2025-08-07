@@ -14,7 +14,26 @@ $result = $conn->query($sql);
     <title>Apu Sharma's Porfolio</title>
 </head>
 <body>
-<?php
+<div class="container">
+    <header>
+        <h3>Apu Sharma</h3>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Socials</a></li>
+            </ul>
+        </nav>
+        <button class="admin-btn">Admin Panel</button>
+
+
+    </header>
+
+
+
+    <?php
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<div>";
@@ -33,5 +52,25 @@ $result = $conn->query($sql);
 
     $conn->close();
     ?>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
