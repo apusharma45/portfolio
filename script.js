@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.querySelector('.admin-btn');
-    if (button) {
-      button.addEventListener('click', () => {
-        window.location.href = 'admin/login.php';
-      });
+  const typed = new Typed('#typed', {
+    strings: ['Aspiring Web Developer'],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: false,
+    showCursor: true,
+    cursorChar: '|',
+    onComplete: (self) => {
+      self.cursor.remove();
     }
   });
+});
