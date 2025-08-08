@@ -65,34 +65,38 @@ $result = $conn->query($sql);
                     <button class="resume-btn">Resume</button>
                 </div>
                 <div class="hero-image">
-                    <img src="uploads/profile.jpg"
-                        alt="Apu Sharma" class="profile-image" />
+                    <img src="uploads/profile.jpg" alt="Apu Sharma" class="profile-image" />
                 </div>
             </div>
         </section>
 
-
-
-        <?php
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "<div>";
-            echo "<h2>" . htmlspecialchars($row['title']) . "</h2>";
-            echo "<p>" . htmlspecialchars($row['description']) . "</p>";
-            echo "<p><strong>Tech Stack:</strong> " . htmlspecialchars($row['tech_stack']) . "</p>";
-            echo "<p><strong>Type:</strong> " . htmlspecialchars($row['project_type']) . "</p>";
-            echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' alt='Project Image' width='200'>";
-            echo "<p><a href='" . htmlspecialchars($row['link']) . "' target='_blank'>View Project</a></p>";
-            echo "<hr>";
-            echo "</div>";
-        }
-    } else {
-        echo "<p>No projects found.</p>";
-    }
-
-    $conn->close();
-    ?>
     </main>
+
+    <div class="projects-container">
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='project-card'>";
+                    echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' alt='Project Image' class='project-image' width='200'>";
+                    echo "<div class='project-info'>";
+                        echo "<h2 class='project-title'>" . htmlspecialchars($row['title']) . "</h2>";
+                        echo "<p class='project-description'>" . htmlspecialchars($row['description']) . "</p>";
+                        echo "<p><strong>Tech Stack:</strong> " . htmlspecialchars($row['tech_stack']) . "</p>";
+                        echo "<p><strong>Type:</strong> " . htmlspecialchars($row['project_type']) . "</p>";
+                        echo "<a href='" . htmlspecialchars($row['link']) . "' class='project-link' target='_blank'>View Project</a>";
+                    echo "</div>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No projects found.</p>";
+        }
+
+        $conn->close();
+        ?>
+
+
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
