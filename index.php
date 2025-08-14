@@ -192,12 +192,21 @@ $result = $conn->query($sql);
             <p class="copyright">Copyright©2025-2030</p>
         </div>
 
-        <div class="icons-container">
+        <div class="social-icons">
+                <a href="https://github.com/apusharma45" class="social-link" target="_blank">
+                    <img src="uploads/github.svg" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com/in/apusharma/" class="social-link" target="_blank">
+                    <img src="uploads/linkedin.svg" alt="Linkedin">
+                </a>
+                <a href="https://facebook.com/apusharma45" class="social-link" target="_blank">
+                    <img src="uploads/facebook.svg" alt="Facebook">
 
-        </div>
+                </a>
+            </div>
 
         <div class="design-container">
-
+            <p class="credit">Designed by Apu Sharma</p>
         </div>
     </div>
 
