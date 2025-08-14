@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .progress-bar-background {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .progress-bar-container {
+            width: 500px;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 10px 30px -15px blue;
+        }
+        .progress-bar-background .progress-box {
+            width: 100%;
+            margin: 10px 0px;
+        }
+        .progress-box .progress-bar-box {
+            display: flex;
+            align-items: center;
+        }
+        .progress-box .progress-bar-box .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #f2f2f2;
+            border-radius: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-box .progress-bar-box .progress-bar .line {
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            background-color: blue;
+            border-radius: 100px;
+        }
+        .progress-box .progress-bar-box .increasing-percentage {
+            margin-left: 10px;
+            font-size: 25px;
+        }
+        .progress-box .progress-bar-box .total-percentage {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="progress-bar-background">
+        <div class="progress-bar-container">
+            <div class="progress-box">
+                <p style="font-size: 25px; font-weight: bold;">HTML</p>
+                <div class="progress-bar-box">
+                    <div class="progress-bar">
+                        <span class="line"></span>
+                    </div>
+                    <p class="increasing-percentage">0%</p>
+                    <div class="total-percentage">90%</div>
+                </div>
+
+            </div>
+            <div class="progress-box">
+                <p style="font-size: 25px; font-weight: bold;">CSS</p>
+                <div class="progress-bar-box">
+                    <div class="progress-bar">
+                        <span class="line"></span>
+                    </div>
+                    <p class="increasing-percentage">0%</p>
+                    <div class="total-percentage">80%</div>
+                </div>
+
+            </div>
+            <div class="progress-box">
+                <p style="font-size: 25px; font-weight: bold;">JAVASCRIPT</p>
+                <div class="progress-bar-box">
+                    <div class="progress-bar">
+                        <span class="line"></span>
+                    </div>
+                    <p class="increasing-percentage">0%</p>
+                    <div class="total-percentage">90%</div>
+                </div>
+
+            </div>
+            <div class="progress-box">
+                <p style="font-size: 25px; font-weight: bold;">PHP</p>
+                <div class="progress-bar-box">
+                    <div class="progress-bar">
+                        <span class="line"></span>
+                    </div>
+                    <p class="increasing-percentage">0%</p>
+                    <div class="total-percentage">70%</div>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+    <script>
+        let boxes = document.querySelectorAll(".progress-box");
+        load_bars = () => {
+            boxes.forEach(box => {
+                let line = box.querySelector(".line");
+                let increasing_percentage = box.querySelector(".increasing-percentage");
+                let total_percentage = box.querySelector(".total-percentage");
+                let p = 0;
+                let my_interval = setInterval(()=> {
+                    p++;
+                    line.style.width = p+"%";
+                    increasing_percentage.innerHTML = p+"%";
+                    if(increasing_percentage.innerHTML == total_percentage.innerHTML) {
+                        clearInterval(my_interval);
+                    }
+                }, 25);
+
+            });
+        }
+        
+        window.onload= function() {
+            setTimeout(()=> {
+                load_bars();
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>
