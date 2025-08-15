@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'admin/db.php';
 
 $sql = "SELECT * FROM projects";
 $result = $conn->query($sql);
@@ -212,7 +212,7 @@ $result = $conn->query($sql);
 
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="/scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
