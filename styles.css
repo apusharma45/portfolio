@@ -262,3 +262,20 @@ body {
   height: 20px;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10vw;
+  background-color: #333;
+
+}
+
+.copyright {
+  color: white;
+}
+
+.credit {
+  color: white;
+}
+
