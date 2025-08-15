@@ -14,7 +14,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Apu Sharma - Web Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
 <body>
@@ -212,7 +212,7 @@ $result = $conn->query($sql);
 
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 
 </html>
