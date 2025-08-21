@@ -28,6 +28,9 @@ $result = $conn->query($sql);
                 <li><a href="#projects" class="nav-link">Projects</a></li>
             </ul>
             <div class="social-icons">
+            <a href="admin/login.php" class="social-link" target="_blank">
+                    <button class="btn-style"><img src="uploads/admin-icon.svg" alt="Admin" class="btn-icon"></button>
+                </a>
                 <a href="https://github.com/apusharma45" class="social-link" target="_blank">
                     <img src="uploads/github.svg" alt="GitHub">
                 </a>

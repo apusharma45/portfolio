@@ -57,12 +57,37 @@ body {
 }
 
 .social-link {
-  color: #1a237e;
+  color: white;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #3949ab;
+  color: #cdcdcd;
+}
+
+.btn-style {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-style:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .main {
