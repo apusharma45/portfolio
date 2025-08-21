@@ -27,20 +27,10 @@ $result = $conn->query($sql);
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
             </ul>
-            <div class="social-icons">
-            <a href="admin/login.php" class="social-link" target="_blank">
-                    <button class="btn-style"><img src="uploads/admin-icon.svg" alt="Admin" class="btn-icon"></button>
-                </a>
-                <a href="https://github.com/apusharma45" class="social-link" target="_blank">
-                    <img src="uploads/github.svg" alt="GitHub">
-                </a>
-                <a href="https://linkedin.com/in/apusharma/" class="social-link" target="_blank">
-                    <img src="uploads/linkedin.svg" alt="Linkedin">
-                </a>
-                <a href="https://facebook.com/apusharma45" class="social-link" target="_blank">
-                    <img src="uploads/facebook.svg" alt="Facebook">
-
-                </a>
+            <div class="admin-icon-container">
+            <a href="admin/login.php" class="admin-link" target="_blank">
+                <button class="btn-style"><img src="uploads/admin-icon.svg" alt="Admin" class="btn-icon"></button>
+            </a>
             </div>
         </nav>
     </header>

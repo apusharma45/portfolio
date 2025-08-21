@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $hashed_password)) {
             $_SESSION['logged_in'] = true;
             $_SESSION['username'] = $username;
-            header("Location: add_project.php");
+            header("Location: dashboard.php");
             exit();
         } else {
             $error = "Invalid credentials!";

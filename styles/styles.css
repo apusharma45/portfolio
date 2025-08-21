@@ -51,25 +51,24 @@ body {
   color: #1a237e;
 }
 
-.social-icons {
+.admin-icon-container {
   display: flex;
   gap: 1rem;
 }
 
-.social-link {
-  color: white;
+.admin-link {
   transition: color 0.3s ease;
 }
 
-.social-link:hover {
-  color: #cdcdcd;
+.admin-link:hover {
+  
 }
 
 .btn-style {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   background: linear-gradient(135deg, #4e54c8, #8f94fb);
   border: none;
   border-radius: 8px;
@@ -223,8 +222,9 @@ body {
   margin-right: 5vw;
   display: flex;
   gap: 2vw;
-  flex-wrap: wrap; /* ensures responsiveness */
-  justify-content: center; /* centers them horizontally */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin-bottom: 20px;
 }
 
 .project-card {
@@ -298,6 +298,20 @@ body {
 
 .copyright {
   color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: red;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: red;
 }
 
 .credit {
