@@ -1,4 +1,3 @@
-/* General Body & Header */
 body {
     font-family: Arial, sans-serif;
     background: #f4f6f9;
@@ -31,12 +30,12 @@ header a:hover {
     background: #c0392b;
 }
 
-/* Main Content */
+
 main {
     padding: 30px;
 }
 
-/* Dashboard Header (Title + Add Button) */
+
 .dashboard-header {
     display: flex;
     justify-content: space-between;
@@ -63,11 +62,11 @@ main {
     transition: 0.3s;
 }
 
-/* Buttons */
 
 .btn-add { 
     background: #3498db; 
 } 
+
 .btn-add:hover { 
     background: #2980b9; 
 }
@@ -95,7 +94,7 @@ main {
     background: #7f8c8d;
 }
 
-/* Tables */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -115,7 +114,7 @@ table tr:hover {
     background: #f1f1f1;
 }
 
-/* Modals */
+
 .modal {
     display: none;
     position: fixed;
@@ -133,8 +132,8 @@ table tr:hover {
     border-radius: 10px;
     width: 400px;
     max-width: 90%;
-    max-height: 90vh;       /* limit height */
-    overflow-y: auto;       /* add vertical scroll if content exceeds */
+    max-height: 90vh;       
+    overflow-y: auto;       
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     animation: fadeIn 0.3s ease-in-out;
@@ -169,7 +168,7 @@ table tr:hover {
     justify-content: space-between;
 }
 
-/* Modal Animation */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }

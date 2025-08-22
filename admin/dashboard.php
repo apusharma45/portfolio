@@ -23,13 +23,12 @@ $result = $conn->query($sql);
     </header>
 
     <main>
-        <!-- Header with Add Project Button -->
+        
         <div class="dashboard-header">
             <h3>All Projects</h3>
             <button class="btn btn-add" onclick="openAddModal()">Add Project</button>
         </div>
 
-        <!-- Projects Table -->
         <table>
             <tr>
                 <th>ID</th>
@@ -42,7 +41,10 @@ $result = $conn->query($sql);
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo htmlspecialchars($row['title']); ?></td>
                         <td>
-                            <a href="update_project.php?id=<?php echo $row['id']; ?>" class="btn btn-update">Update</a>
+                            <form method="POST" action="update_project.php" style="display:inline;">
+                                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                <button type="submit" class="btn btn-update">Update</button>
+                            </form>
                             <button class="btn btn-delete" onclick="openModal(<?php echo $row['id']; ?>)">Delete</button>
                         </td>
                     </tr>
@@ -53,7 +55,6 @@ $result = $conn->query($sql);
         </table>
     </main>
 
-    <!-- Delete Confirmation Modal -->
     <div class="modal" id="deleteModal">
         <div class="modal-content">
             <h3>Confirm Deletion</h3>
@@ -68,7 +69,7 @@ $result = $conn->query($sql);
         </div>
     </div>
 
-    <!-- Add Project Modal -->
+
     <div class="modal" id="addModal">
         <div class="modal-content">
             <h3>Add New Project</h3>
