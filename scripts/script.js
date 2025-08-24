@@ -37,3 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const contactBtn = document.getElementById("contact-btn");
+const contactForm = document.getElementById("contact-form");
+
+contactBtn.addEventListener("click", () => {
+  if (contactForm.style.display === "flex") {
+    contactForm.style.display = "none";
+    contactForm.setAttribute("aria-hidden", "true");
+  } else {
+    contactForm.style.display = "flex";
+    contactForm.setAttribute("aria-hidden", "false");
+  }
+});
+
+
+

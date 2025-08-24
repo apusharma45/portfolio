@@ -28,9 +28,9 @@ $result = $conn->query($sql);
                 <li><a href="#projects" class="nav-link">Projects</a></li>
             </ul>
             <div class="admin-icon-container">
-            <a href="admin/login.php" class="admin-link" target="_blank">
-                <button class="btn-style"><img src="uploads/admin-icon.svg" alt="Admin" class="btn-icon"></button>
-            </a>
+                <a href="admin/login.php" class="admin-link" target="_blank">
+                    <button class="btn-style"><img src="uploads/admin-icon.svg" alt="Admin" class="btn-icon"></button>
+                </a>
             </div>
         </nav>
     </header>
@@ -150,7 +150,7 @@ $result = $conn->query($sql);
             </div>
 
         </div>
-    
+
     </div>
 
     <div class="projects-container">
@@ -158,14 +158,14 @@ $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='project-card'>";
-                    echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' alt='Project Image' class='project-image' width='200'>";
-                    echo "<div class='project-info'>";
-                        echo "<h2 class='project-title'>" . htmlspecialchars($row['title']) . "</h2>";
-                        echo "<p class='project-description'>" . htmlspecialchars($row['description']) . "</p>";
-                        echo "<p><strong>Tech Stack:</strong> " . htmlspecialchars($row['tech_stack']) . "</p>";
-                        echo "<p><strong>Type:</strong> " . htmlspecialchars($row['project_type']) . "</p>";
-                        echo "<a href='" . htmlspecialchars($row['link']) . "' class='project-link' target='_blank'>View Project</a>";
-                    echo "</div>";
+                echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' alt='Project Image' class='project-image' width='200'>";
+                echo "<div class='project-info'>";
+                echo "<h2 class='project-title'>" . htmlspecialchars($row['title']) . "</h2>";
+                echo "<p class='project-description'>" . htmlspecialchars($row['description']) . "</p>";
+                echo "<p><strong>Tech Stack:</strong> " . htmlspecialchars($row['tech_stack']) . "</p>";
+                echo "<p><strong>Type:</strong> " . htmlspecialchars($row['project_type']) . "</p>";
+                echo "<a href='" . htmlspecialchars($row['link']) . "' class='project-link' target='_blank'>View Project</a>";
+                echo "</div>";
                 echo "</div>";
             }
         } else {
@@ -186,22 +186,39 @@ $result = $conn->query($sql);
         </div>
 
         <div class="social-icons">
-                <a href="https://github.com/apusharma45" class="social-link" target="_blank">
-                    <img src="uploads/github.svg" alt="GitHub">
-                </a>
-                <a href="https://linkedin.com/in/apusharma/" class="social-link" target="_blank">
-                    <img src="uploads/linkedin.svg" alt="Linkedin">
-                </a>
-                <a href="https://facebook.com/apusharma45" class="social-link" target="_blank">
-                    <img src="uploads/facebook.svg" alt="Facebook">
+            <a href="https://github.com/apusharma45" class="social-link" target="_blank">
+                <img src="uploads/github.svg" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/apusharma/" class="social-link" target="_blank">
+                <img src="uploads/linkedin.svg" alt="Linkedin">
+            </a>
+            <a href="https://facebook.com/apusharma45" class="social-link" target="_blank">
+                <img src="uploads/facebook.svg" alt="Facebook">
 
-                </a>
-            </div>
+            </a>
+        </div>
 
         <div class="design-container">
             <p class="credit">Designed by Apu Sharma</p>
         </div>
     </div>
+
+    <div class="contact-container">
+        <button id="contact-btn" class="contact-btn" aria-label="Contact Me">💬</button>
+
+        <div id="contact-form" class="contact-form" aria-hidden="true">
+            <h3>Contact Me</h3>
+            <form action="send_message.php" method="POST" autocomplete="on">
+                
+                <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+        </div>
+    </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
