@@ -50,5 +50,22 @@ contactBtn.addEventListener("click", () => {
   }
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+  const feedback = document.getElementById("contact-feedback");
+
+  if (status === "success") {
+    feedback.textContent = "Message sent successfully!";
+    feedback.classList.add("show");
+    setTimeout(() => feedback.classList.remove("show"), 4000); // hide after 4s
+  } else if (status === "error") {
+    feedback.textContent = "Message could not be sent. Try again.";
+    feedback.classList.add("show");
+    setTimeout(() => feedback.classList.remove("show"), 4000);
+  }
+});
+
+
 
 

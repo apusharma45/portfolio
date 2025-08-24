@@ -202,6 +202,8 @@ $result = $conn->query($sql);
             <p class="credit">Designed by Apu Sharma</p>
         </div>
     </div>
+    
+    <div id="contact-feedback" class="contact-feedback"></div>
 
     <div class="contact-container">
         <button id="contact-btn" class="contact-btn" aria-label="Contact Me">💬</button>
