@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f5f3e7;
@@ -13,9 +18,14 @@ body {
 
 
 .header {
-  padding: 1.5rem 2rem;
-  position: relative;
-  z-index: 100;
+  padding: 0.6rem 2rem; /* more compressed vertical padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f5f3e7;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
 .nav {
@@ -23,13 +33,13 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 80px; /* reduced horizontal padding */
+  padding-right: 80px;
   margin: 0 auto;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.4rem; /* slightly smaller for compact look */
   font-weight: 700;
   color: #1a237e;
 }
@@ -37,7 +47,7 @@ body {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem; /* reduced gap */
 }
 
 .nav-link {
@@ -46,6 +56,14 @@ body {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
+.nav-link.active {
+  color: #1a237e;   /* highlight color */
+  font-weight: 700; /* optional bold */
+  border-bottom: 2px solid #1a237e; /* subtle underline */
+  padding-bottom: 2px;
+}
+
 
 .nav-link:hover {
   color: #1a237e;
@@ -60,18 +78,17 @@ body {
   transition: color 0.3s ease;
 }
 
-
 .btn-style {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 30px;
+  padding: 8px 25px; /* slightly smaller button */
   background: linear-gradient(135deg, #4e54c8, #8f94fb);
   border: none;
   border-radius: 8px;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px; /* slightly smaller font */
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -88,7 +105,9 @@ body {
 
 .main {
   padding: 2rem;
+  padding-top: 70px; /* adjusted for compressed header */
 }
+
 
 .hero {
   max-width: 100%;
@@ -133,6 +152,7 @@ body {
 }
 
 .resume-btn {
+  text-decoration: none;
   background-color: #f9d71c;
   border: 2px solid #1a237e;
   color: #1a237e;
@@ -166,10 +186,49 @@ body {
   border: 8px solid #e8e6d9;
   object-fit: cover;
 }
+.section-heading {
+  padding-bottom: 10px;
+}
+.about-section {
+  padding: 80px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
 
 .skills-section {
   padding: 60px 5vw;
   background-color: #f5f3e7;
+}
+
+.skills-subheading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #3949ab;
 }
 
 
@@ -178,8 +237,8 @@ body {
   font-weight: 700;
   color: #1a237e;
   text-align: center;
-  margin-bottom: 40px;
 }
+
 
 .progress-bar-background {
   display: flex;
@@ -203,13 +262,6 @@ body {
   transform: translateY(-5px);
 }
 
-.skills-subheading {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #3949ab;
-}
 
 .progress-box {
   margin: 10px 0px;
@@ -276,7 +328,6 @@ body {
 .projects-section {
   padding: 60px 5vw;
   background-color: #f5f3e7;
-  margin-top: 40px; /* keep your existing spacing */
 }
 
 /* Section Heading */

@@ -37,7 +37,7 @@ $result = $conn->query($sql);
     </header>
 
     <main class="main">
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="hero-greeting">Hello, I'm Apu</p>
@@ -45,7 +45,7 @@ $result = $conn->query($sql);
                         <span id="typed"></span>
                     </h2>
                     <p class="hero-subtitle">based in Bangladesh.</p>
-                    <button class="resume-btn">Resume</button>
+                    <a href="resume/as_resume.pdf" download class="resume-btn">Resume</a>
                 </div>
                 <div class="hero-image">
                     <img src="uploads/profile.jpg" alt="Apu Sharma" class="profile-image" />
@@ -54,6 +54,24 @@ $result = $conn->query($sql);
         </section>
 
     </main>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+        <h2 class="section-heading">About Me</h2>
+            <p>
+                Hi, I'm Apu Sharma, a web developer based in Bangladesh. I specialize in creating modern,
+                responsive, and user-friendly web applications using HTML, CSS, JavaScript, PHP, and frameworks like
+                React.js, Laravel, Node.js, and Tailwind CSS.
+            </p>
+            <p>
+                In addition to coding, I have strong problem-solving skills and enjoy tackling challenging programming
+                tasks. I am passionate about learning new technologies and continuously improving my skills to deliver
+                innovative and efficient solutions in web development.
+            </p>
+        </div>
+    </section>
+
+
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
@@ -101,7 +119,7 @@ $result = $conn->query($sql);
                 </div>
             </div>
 
-        
+
             <div class="progress-bar-container">
                 <h3 class="skills-subheading">Frameworks</h3>
 
