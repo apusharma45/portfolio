@@ -14,6 +14,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Apu Sharma - Web Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="styles/styles.css" />
 </head>
 
@@ -54,101 +55,95 @@ $result = $conn->query($sql);
 
     </main>
 
-
+    <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <h2 class="section-heading">My Skills</h2>
 
         <div class="progress-bar-background">
+            <!-- First Container: Languages -->
             <div class="progress-bar-container">
+                <h3 class="skills-subheading">Languages</h3>
+
                 <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">HTML</p>
+                    <p class="skill-name"><i class="fab fa-html5"></i> HTML</p>
                     <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
+                        <div class="progress-bar"><span class="line"></span></div>
                         <p class="increasing-percentage">0%</p>
                         <div class="total-percentage">90%</div>
                     </div>
                 </div>
 
                 <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">CSS</p>
+                    <p class="skill-name"><i class="fab fa-css3-alt"></i> CSS</p>
                     <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
+                        <div class="progress-bar"><span class="line"></span></div>
                         <p class="increasing-percentage">0%</p>
                         <div class="total-percentage">80%</div>
                     </div>
                 </div>
 
                 <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">JAVASCRIPT</p>
+                    <p class="skill-name"><i class="fab fa-js"></i> JavaScript</p>
                     <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
+                        <div class="progress-bar"><span class="line"></span></div>
                         <p class="increasing-percentage">0%</p>
                         <div class="total-percentage">90%</div>
                     </div>
                 </div>
 
                 <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">PHP</p>
+                    <p class="skill-name"><i class="fab fa-php"></i> PHP</p>
                     <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
+                        <div class="progress-bar"><span class="line"></span></div>
                         <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">70%</div>
+                        <div class="total-percentage">85%</div>
                     </div>
                 </div>
             </div>
 
+        
             <div class="progress-bar-container">
+                <h3 class="skills-subheading">Frameworks</h3>
+
                 <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">HTML</p>
+                    <p class="skill-name"><i class="fab fa-react"></i> React.js</p>
                     <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
+                        <div class="progress-bar"><span class="line"></span></div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">85%</div>
+                    </div>
+                </div>
+
+                <div class="progress-box">
+                    <p class="skill-name">
+                        <img src="uploads/laravel_icon.svg" alt="Laravel" style="width:20px;height:20px;"> Laravel
+                    </p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar"><span class="line"></span></div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">88%</div>
+                    </div>
+                </div>
+
+
+                <div class="progress-box">
+                    <p class="skill-name"><i class="fab fa-node-js"></i> Node.js</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar"><span class="line"></span></div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">82%</div>
+                    </div>
+                </div>
+
+                <div class="progress-box">
+                    <p class="skill-name"><i class="fab fa-css3-alt"></i> Tailwind CSS</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar"><span class="line"></span></div>
                         <p class="increasing-percentage">0%</p>
                         <div class="total-percentage">90%</div>
                     </div>
                 </div>
 
-                <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">CSS</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">80%</div>
-                    </div>
-                </div>
-
-                <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">JAVASCRIPT</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">90%</div>
-                    </div>
-                </div>
-
-                <div class="progress-box">
-                    <p style="font-size: 20px; font-weight: bold;">PHP</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar">
-                            <span class="line"></span>
-                        </div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">70%</div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
