@@ -149,7 +149,6 @@ body {
   color: #f9d71c;
 }
 
-/* Hero Image */
 .hero-image {
   display: flex;
   justify-content: center;
@@ -167,6 +166,15 @@ body {
   border: 8px solid #e8e6d9;
   object-fit: cover;
 }
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  color: #1a237e;
+}
+
 
 .progress-bar-background {
   display: flex;
@@ -211,6 +219,10 @@ body {
 }
 .progress-box .progress-bar-box .total-percentage {
   display: none;
+}
+
+.projects-section {
+  margin-top: 80px;
 }
 
 .projects-container {

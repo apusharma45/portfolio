@@ -54,129 +54,133 @@ $result = $conn->query($sql);
 
     </main>
 
-    <div class="progress-bar-background">
-        <div class="progress-bar-container">
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">HTML</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
+
+    <section id="skills" class="skills-section">
+        <h2 class="section-heading">My Skills</h2>
+
+        <div class="progress-bar-background">
+            <div class="progress-bar-container">
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">HTML</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">90%</div>
                     </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">90%</div>
                 </div>
 
-            </div>
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">CSS</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">CSS</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">80%</div>
                     </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">80%</div>
                 </div>
 
-            </div>
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">JAVASCRIPT</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">JAVASCRIPT</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">90%</div>
                     </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">90%</div>
                 </div>
 
-            </div>
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">PHP</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">PHP</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">70%</div>
                     </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">70%</div>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">HTML</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">90%</div>
+                    </div>
                 </div>
 
-            </div>
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">CSS</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">80%</div>
+                    </div>
+                </div>
 
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">JAVASCRIPT</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">90%</div>
+                    </div>
+                </div>
+
+                <div class="progress-box">
+                    <p style="font-size: 20px; font-weight: bold;">PHP</p>
+                    <div class="progress-bar-box">
+                        <div class="progress-bar">
+                            <span class="line"></span>
+                        </div>
+                        <p class="increasing-percentage">0%</p>
+                        <div class="total-percentage">70%</div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="progress-bar-container">
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">HTML</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
-                    </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">90%</div>
-                </div>
 
-            </div>
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">CSS</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
-                    </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">80%</div>
-                </div>
+    <section id="projects" class="projects-section">
+        <h2 class="section-heading">My Projects</h2>
 
-            </div>
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">JAVASCRIPT</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
-                    </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">90%</div>
-                </div>
-
-            </div>
-            <div class="progress-box">
-                <p style="font-size: 20px; font-weight: bold;">PHP</p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar">
-                        <span class="line"></span>
-                    </div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage">70%</div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="projects-container">
-        <?php
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<div class='project-card'>";
-                echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' alt='Project Image' class='project-image' width='200'>";
-                echo "<div class='project-info'>";
-                echo "<h2 class='project-title'>" . htmlspecialchars($row['title']) . "</h2>";
-                echo "<p class='project-description'>" . htmlspecialchars($row['description']) . "</p>";
-                echo "<p><strong>Tech Stack:</strong> " . htmlspecialchars($row['tech_stack']) . "</p>";
-                echo "<p><strong>Type:</strong> " . htmlspecialchars($row['project_type']) . "</p>";
-                echo "<a href='" . htmlspecialchars($row['link']) . "' class='project-link' target='_blank'>View Project</a>";
-                echo "</div>";
-                echo "</div>";
+        <div class="projects-container">
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='project-card'>";
+                    echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' alt='Project Image' class='project-image' width='200'>";
+                    echo "<div class='project-info'>";
+                    echo "<h2 class='project-title'>" . htmlspecialchars($row['title']) . "</h2>";
+                    echo "<p class='project-description'>" . htmlspecialchars($row['description']) . "</p>";
+                    echo "<p><strong>Tech Stack:</strong> " . htmlspecialchars($row['tech_stack']) . "</p>";
+                    echo "<p><strong>Type:</strong> " . htmlspecialchars($row['project_type']) . "</p>";
+                    echo "<a href='" . htmlspecialchars($row['link']) . "' class='project-link' target='_blank'>View Project</a>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>No projects found.</p>";
             }
-        } else {
-            echo "<p>No projects found.</p>";
-        }
 
-        $conn->close();
-        ?>
+            $conn->close();
+            ?>
+        </div>
+    </section>
 
-
-    </div>
 
     <div class="break"></div>
 
@@ -202,7 +206,7 @@ $result = $conn->query($sql);
             <p class="credit">Designed by Apu Sharma</p>
         </div>
     </div>
-    
+
     <div id="contact-feedback" class="contact-feedback"></div>
 
     <div class="contact-container">
@@ -211,7 +215,7 @@ $result = $conn->query($sql);
         <div id="contact-form" class="contact-form" aria-hidden="true">
             <h3>Contact Me</h3>
             <form action="send_message.php" method="POST" autocomplete="on">
-                
+
                 <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
                 <input type="email" name="email" placeholder="Your Email" required>
