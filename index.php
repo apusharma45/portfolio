@@ -3,6 +3,16 @@ include 'admin/db.php';
 
 $sql = "SELECT * FROM projects";
 $result = $conn->query($sql);
+
+$skills_sql = "SELECT * FROM skills ORDER BY category, id";
+$skills_result = $conn->query($skills_sql);
+
+$skills_by_category = [];
+if ($skills_result->num_rows > 0) {
+    while ($skill = $skills_result->fetch_assoc()) {
+        $skills_by_category[$skill['category']][] = $skill;
+    }
+}
 ?>
 
 
@@ -99,95 +109,36 @@ $result = $conn->query($sql);
     </section>
 
     <section id="skills" class="skills-section">
-        <h2 class="section-heading">My Skills</h2>
+    <h2 class="section-heading">My Skills</h2>
 
-        <div class="progress-bar-background">
-            <div class="progress-bar-container">
-                <h3 class="skills-subheading">Languages</h3>
+    <div class="progress-bar-background">
+        <?php foreach ($skills_by_category as $category => $skills): ?>
+        <div class="progress-bar-container">
+            <h3 class="skills-subheading"><?= htmlspecialchars($category) ?></h3>
 
-                <div class="progress-box">
-                    <p class="skill-name"><i class="fab fa-html5"></i> HTML</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">90%</div>
-                    </div>
-                </div>
-
-                <div class="progress-box">
-                    <p class="skill-name"><i class="fab fa-css3-alt"></i> CSS</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">80%</div>
-                    </div>
-                </div>
-
-                <div class="progress-box">
-                    <p class="skill-name"><i class="fab fa-js"></i> JavaScript</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">90%</div>
-                    </div>
-                </div>
-
-                <div class="progress-box">
-                    <p class="skill-name"><i class="fab fa-php"></i> PHP</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">85%</div>
-                    </div>
+            <?php foreach ($skills as $skill): ?>
+            <div class="progress-box">
+                <p class="skill-name">
+                    <?php
+                    if ($skill['icon_type'] === 'fa') {
+                        echo "<i class='" . htmlspecialchars($skill['icon_value']) . "'></i> ";
+                    } elseif ($skill['icon_type'] === 'img') {
+                        echo "<img src='" . htmlspecialchars($skill['icon_value']) . "' alt='" . htmlspecialchars($skill['name']) . "' style='width:20px;height:20px;'> ";
+                    }
+                    echo htmlspecialchars($skill['name']);
+                    ?>
+                </p>
+                <div class="progress-bar-box">
+                    <div class="progress-bar"><span class="line"></span></div>
+                    <p class="increasing-percentage">0%</p>
+                    <div class="total-percentage"><?= htmlspecialchars($skill['percentage']) ?>%</div>
                 </div>
             </div>
-
-
-            <div class="progress-bar-container">
-                <h3 class="skills-subheading">Frameworks</h3>
-
-                <div class="progress-box">
-                    <p class="skill-name"><i class="fab fa-react"></i> React.js</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">85%</div>
-                    </div>
-                </div>
-
-                <div class="progress-box">
-                    <p class="skill-name">
-                        <img src="uploads/laravel_icon.svg" alt="Laravel" style="width:20px;height:20px;"> Laravel
-                    </p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">88%</div>
-                    </div>
-                </div>
-
-
-                <div class="progress-box">
-                    <p class="skill-name"><i class="fab fa-node-js"></i> Node.js</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">82%</div>
-                    </div>
-                </div>
-
-                <div class="progress-box">
-                    <p class="skill-name"><i class="fab fa-css3-alt"></i> Tailwind CSS</p>
-                    <div class="progress-bar-box">
-                        <div class="progress-bar"><span class="line"></span></div>
-                        <p class="increasing-percentage">0%</p>
-                        <div class="total-percentage">90%</div>
-                    </div>
-                </div>
-
-            </div>
+            <?php endforeach; ?>
         </div>
-    </section>
+        <?php endforeach; ?>
+    </div>
+</section>
 
 
     <section id="projects" class="projects-section">
