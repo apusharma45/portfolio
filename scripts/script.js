@@ -7,10 +7,15 @@ function updateActiveLink() {
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
+
         if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
+
+    if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 10) {
+        current = 'socials';
+    }
 
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -19,6 +24,7 @@ function updateActiveLink() {
         }
     });
 }
+
 
 window.addEventListener('scroll', updateActiveLink);
 

@@ -3,7 +3,8 @@ session_start();
 require 'db.php';
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    die("Access Denied!");
+    header("Location: login.php");
+    exit();
 }
 
 $sql = "SELECT * FROM projects ORDER BY id";
