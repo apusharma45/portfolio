@@ -98,15 +98,10 @@ $result = $conn->query($sql);
         </div>
     </section>
 
-
-
-
-    <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <h2 class="section-heading">My Skills</h2>
 
         <div class="progress-bar-background">
-            <!-- First Container: Languages -->
             <div class="progress-bar-container">
                 <h3 class="skills-subheading">Languages</h3>
 

@@ -1,4 +1,3 @@
-// ScrollSpy for highlighting current section
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -6,7 +5,7 @@ function updateActiveLink() {
     let current = '';
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100; // adjust for fixed header
+        const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
@@ -21,10 +20,8 @@ function updateActiveLink() {
     });
 }
 
-// Run scrollspy on scroll
 window.addEventListener('scroll', updateActiveLink);
 
-// Skill progress bars
 let boxes = document.querySelectorAll(".progress-box");
 
 function load_bars() {
@@ -44,20 +41,18 @@ function load_bars() {
     });
 }
 
-// Animate bars when Skills section is in view
 const skillsSection = document.getElementById('skills');
 const skillsObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             load_bars();
-            skillsObserver.unobserve(skillsSection); // run only once
+            skillsObserver.unobserve(skillsSection);
         }
     });
 }, { threshold: 0.5 });
 
 skillsObserver.observe(skillsSection);
 
-// Hero Typed.js animation
 const heroSection = document.querySelector('.hero');
 const heroObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -73,20 +68,16 @@ const heroObserver = new IntersectionObserver(entries => {
                     self.cursor.remove();
                 }
             });
-            heroObserver.unobserve(heroSection); // run only once
+            heroObserver.unobserve(heroSection);
         }
     });
 }, { threshold: 0.5 });
 
 heroObserver.observe(heroSection);
 
-// Main DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Initial ScrollSpy call
     updateActiveLink();
-
-    // Contact form toggle
     const contactBtn = document.getElementById("contact-btn");
     const contactForm = document.getElementById("contact-form");
 
@@ -100,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Contact feedback messages
     const params = new URLSearchParams(window.location.search);
     const status = params.get("status");
     const feedback = document.getElementById("contact-feedback");
@@ -113,5 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
         feedback.textContent = "Message could not be sent. Try again.";
         feedback.classList.add("show");
         setTimeout(() => feedback.classList.remove("show"), 4000);
+    }
+    if (status) {
+        const url = new URL(window.location);
+        url.searchParams.delete('status');
+        window.history.replaceState({}, document.title, url);
     }
 });
