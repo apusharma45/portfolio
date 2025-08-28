@@ -217,6 +217,57 @@ body {
   line-height: 1.6;
 }
 
+.education-section {
+  padding: 80px 100px;
+  /* background-color: #ffffff; */
+}
+
+.education-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.education-item {
+  background: #f9f9f9;
+  border-left: 5px solid #1a237e;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-degree {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 5px;
+}
+
+.education-institution {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #3949ab;
+  margin-bottom: 3px;
+}
+
+.education-year {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.education-details {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
 
 .skills-section {
   padding: 60px 5vw;

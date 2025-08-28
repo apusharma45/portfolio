@@ -25,6 +25,7 @@ $result = $conn->query($sql);
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#socials" class="nav-link">Socials</a></li>
@@ -71,6 +72,32 @@ $result = $conn->query($sql);
             </p>
         </div>
     </section>
+
+    <section id="education" class="education-section">
+        <div class="education-container">
+            <h2 class="section-heading">Education</h2>
+
+            <div class="education-item">
+                <h3 class="education-degree">Bachelor of Science in Computer Science & Engineering</h3>
+                <p class="education-institution">Khulna University of Engineering and Technology, Khulna, Bangladesh</p>
+                <p class="education-year">2022 – 2027</p>
+                <p class="education-details">
+                    Focusing on software engineering, web development, and data structures.
+                    Doing projects on full-stack development, database design, and algorithms.
+                </p>
+            </div>
+
+            <div class="education-item">
+                <h3 class="education-degree">Higher Secondary Certificate (Science)</h3>
+                <p class="education-institution">Police Lines School and College, Rangpur, Bangladesh</p>
+                <p class="education-year">2019 – 2021</p>
+                <p class="education-details">
+                    Studied Physics, Chemistry, Mathematics, and ICT, building a strong foundation for computer science.
+                </p>
+            </div>
+        </div>
+    </section>
+
 
 
 
