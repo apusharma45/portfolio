@@ -94,6 +94,11 @@ main {
     background: #7f8c8d;
 }
 
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
 
 table {
     width: 100%;
@@ -103,7 +108,7 @@ table {
 }
 table th, table td {
     padding: 12px 15px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 table th {
@@ -149,6 +154,10 @@ table tr:hover {
     display: block;
     margin-bottom: 5px;
     text-align: left;
+    font-weight: bold;
+}
+.dropdown {
+    display: block;
     font-weight: bold;
 }
 

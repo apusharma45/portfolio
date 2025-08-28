@@ -109,36 +109,36 @@ if ($skills_result->num_rows > 0) {
     </section>
 
     <section id="skills" class="skills-section">
-    <h2 class="section-heading">My Skills</h2>
+        <h2 class="section-heading">My Skills</h2>
 
-    <div class="progress-bar-background">
-        <?php foreach ($skills_by_category as $category => $skills): ?>
-        <div class="progress-bar-container">
-            <h3 class="skills-subheading"><?= htmlspecialchars($category) ?></h3>
+        <div class="progress-bar-background">
+            <?php foreach ($skills_by_category as $category => $skills): ?>
+                <div class="progress-bar-container">
+                    <h3 class="skills-subheading"><?= htmlspecialchars($category) ?></h3>
 
-            <?php foreach ($skills as $skill): ?>
-            <div class="progress-box">
-                <p class="skill-name">
-                    <?php
-                    if ($skill['icon_type'] === 'fa') {
-                        echo "<i class='" . htmlspecialchars($skill['icon_value']) . "'></i> ";
-                    } elseif ($skill['icon_type'] === 'img') {
-                        echo "<img src='" . htmlspecialchars($skill['icon_value']) . "' alt='" . htmlspecialchars($skill['name']) . "' style='width:20px;height:20px;'> ";
-                    }
-                    echo htmlspecialchars($skill['name']);
-                    ?>
-                </p>
-                <div class="progress-bar-box">
-                    <div class="progress-bar"><span class="line"></span></div>
-                    <p class="increasing-percentage">0%</p>
-                    <div class="total-percentage"><?= htmlspecialchars($skill['percentage']) ?>%</div>
+                    <?php foreach ($skills as $skill): ?>
+                        <div class="progress-box">
+                            <p class="skill-name">
+                                <?php
+                                if ($skill['icon_type'] === 'fa') {
+                                    echo "<i class='" . htmlspecialchars($skill['icon_value']) . "'></i> ";
+                                } elseif ($skill['icon_type'] === 'img') {
+                                    echo "<img src='uploads/" . htmlspecialchars($skill['icon_value']) . "' alt='" . htmlspecialchars($skill['name']) . "' style='width:20px;height:20px;'> ";
+                                }
+                                echo htmlspecialchars($skill['name']);
+                                ?>
+                            </p>
+                            <div class="progress-bar-box">
+                                <div class="progress-bar"><span class="line"></span></div>
+                                <p class="increasing-percentage">0%</p>
+                                <div class="total-percentage"><?= htmlspecialchars($skill['percentage']) ?>%</div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
             <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-    </div>
-</section>
+    </section>
 
 
     <section id="projects" class="projects-section">
