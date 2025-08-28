@@ -3,8 +3,14 @@ session_start();
 require 'db.php';
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header("Location: login.php");
-    exit();
+ 
+    if (isset($_COOKIE['username'])) {
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $_COOKIE['username'];
+    } else {
+        header("Location: login.php");
+        exit();
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

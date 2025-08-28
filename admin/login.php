@@ -2,13 +2,11 @@
 session_start();
 require 'db.php';
 
-// If session exists, redirect to dashboard
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     header("Location: dashboard.php");
     exit();
 }
 
-// Check cookies for "remember me"
 if (!isset($_SESSION['logged_in']) && isset($_COOKIE['username'])) {
     $_SESSION['logged_in'] = true;
     $_SESSION['username'] = $_COOKIE['username'];
@@ -41,9 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['logged_in'] = true;
             $_SESSION['username'] = $username;
 
-            // Set cookies if "Remember Me" is checked
             if ($remember) {
-                $cookie_time = time() + (2 * 60 * 60); // 2 hours
+                $cookie_time = time() + (7 * 24 * 60 * 60);
                 setcookie('username', $username, $cookie_time, "/");
             }
 
