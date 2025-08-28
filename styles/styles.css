@@ -485,60 +485,92 @@ body {
 
 
 .break {
-  background-color: #B5584A;
-  width: 100%;
-  height: 20px;
+  height: 2px;
+  width: 90%;
+  margin: 40px auto;
+  background-color: #ddd;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+
 .footer {
-  background-color: #1f1f1f; /* dark neutral background */
-  padding: 40px 20px;
-  color: #ffffff;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: #eee;
+  padding: 50px 20px 20px;
+  border-top: 2px solid #1a237e;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
 }
 
-.footer p {
-  margin: 5px 0;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #f0f0f0;
+.footer-brand h2 {
+  font-size: 1.5rem;
+  color: #f9d71c;
 }
 
-.social-icons {
+.footer-brand p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.footer-links h3,
+.footer-socials h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #f9d71c;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #f9d71c;
+}
+
+.footer-socials .social-icons {
   display: flex;
   gap: 20px;
-  justify-content: center;
 }
 
-.social-link img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1); /* white icons */
-  transition: transform 0.3s ease, filter 0.3s ease;
+.footer-socials .social-icons a {
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.social-link:hover img {
-  transform: translateY(-4px) scale(1.2);
-  filter: brightness(0) invert(0.8);
+.footer-socials .social-icons a:hover {
+  color: #f9d71c;
+  transform: translateY(-3px);
 }
 
-.credit {
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
   font-size: 0.9rem;
-  color: #b0b0b0;
+  color: #888;
 }
 
 
@@ -562,9 +594,6 @@ body {
   pointer-events: auto;
 }
 
-
-
-/* message button styles */
 
 .contact-container {
   position: fixed;

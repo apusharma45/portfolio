@@ -225,23 +225,39 @@ $result = $conn->query($sql);
 
     <div class="break"></div>
 
-    <div class="footer" id="socials">
+    <footer class="footer" id="socials">
         <div class="footer-container">
-            <p class="copyright">© 2025-2030 Apu Sharma</p>
-            <div class="social-icons">
-                <a href="https://github.com/apusharma45" class="social-link" target="_blank">
-                    <img src="uploads/github.svg" alt="GitHub">
-                </a>
-                <a href="https://linkedin.com/in/apusharma/" class="social-link" target="_blank">
-                    <img src="uploads/linkedin.svg" alt="LinkedIn">
-                </a>
-                <a href="https://facebook.com/apusharma45" class="social-link" target="_blank">
-                    <img src="uploads/facebook.svg" alt="Facebook">
-                </a>
+            <div class="footer-brand">
+                <h2>Apu Sharma</h2>
+                <p>Web Developer • Problem Solver • Tech Enthusiast</p>
             </div>
-            <p class="credit">Designed by Apu Sharma</p>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/apusharma45" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/apusharma/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://facebook.com/apusharma45" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
         </div>
-    </div>
+
+        <div class="footer-bottom">
+            <p>© 2025-2030 Apu Sharma. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 
 
     <div id="contact-feedback" class="contact-feedback"></div>
