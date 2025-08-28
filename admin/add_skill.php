@@ -20,13 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $icon_value = trim($_POST['icon_value'] ?? '');
     $percentage = intval($_POST['percentage'] ?? 0);
 
-    // Validation
     if (empty($category) || empty($name) || empty($icon_type) || empty($icon_value) || $percentage < 0 || $percentage > 100) {
         header("Location: dashboard.php?msg=empty");
         exit();
     }
 
-    // Insert into DB
     $stmt = $conn->prepare("INSERT INTO skills (category, name, icon_type, icon_value, percentage) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssi", $category, $name, $icon_type, $icon_value, $percentage);
 

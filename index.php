@@ -149,7 +149,7 @@ if ($skills_result->num_rows > 0) {
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='project-card'>";
-                    echo "<img src='uploads/" . htmlspecialchars($row['image']) . "' alt='Project Image' class='project-image' width='200'>";
+                    echo "<img src='project_images/" . htmlspecialchars($row['image']) . "' alt='Project Image' class='project-image' width='200'>";
                     echo "<div class='project-info'>";
                     echo "<h2 class='project-title'>" . htmlspecialchars($row['title']) . "</h2>";
                     echo "<p class='project-description'>" . htmlspecialchars($row['description']) . "</p>";
