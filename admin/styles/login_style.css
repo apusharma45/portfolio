@@ -1,11 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
 }
 
 .login-container {
@@ -13,7 +18,8 @@ body {
     padding: 30px 35px;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    width: 320px;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
     transition: transform 0.2s ease;
 }
@@ -26,6 +32,7 @@ h2 {
     margin-bottom: 25px;
     color: #333;
     font-weight: 600;
+    font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .form-group {
@@ -38,14 +45,15 @@ label {
     margin-bottom: 6px;
     font-weight: 500;
     color: #555;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
 }
 
 input {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
     outline: none;
     transition: border 0.2s ease, box-shadow 0.2s ease;
 }
@@ -57,13 +65,13 @@ input:focus {
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: none;
     background-color: #007BFF;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: clamp(1rem, 3vw, 1.125rem);
     font-weight: 500;
     transition: background-color 0.2s ease;
 }
@@ -72,22 +80,16 @@ button:hover {
     background-color: #0056b3;
 }
 
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
 .form-group.remember {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.form-group.remember input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    appearance: none;
-    background-color: #fff;
-    position: relative;
-    transition: border 0.2s ease, background-color 0.2s ease;
 }
 
 .form-group.remember input[type="checkbox"] {
@@ -99,6 +101,7 @@ button:hover {
     appearance: none;
     background-color: #fff;
     position: relative;
+    flex-shrink: 0;
 }
 
 .form-group.remember input[type="checkbox"]:checked {
@@ -114,4 +117,50 @@ button:hover {
     transform: translate(-50%, -50%);
     font-size: 14px;
     color: #fff;
+}
+
+.form-group.remember label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .login-container {
+        padding: 25px 20px;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 18px;
+    }
+    
+    input {
+        padding: 10px 12px;
+    }
+    
+    button {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .login-container {
+        padding: 20px 15px;
+    }
+    
+    .form-group.remember {
+        gap: 8px;
+    }
+    
+    .form-group.remember input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
 }

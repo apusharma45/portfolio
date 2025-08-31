@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="login-container">
         <h2>Admin Login</h2>
         <?php if (!empty($error))
-            echo "<p style='color:red;'>$error</p>"; ?>
+            echo "<p class='error-message'>$error</p>"; ?>
         <form method="POST">
             <div class="form-group">
                 <label for="username">Username</label>

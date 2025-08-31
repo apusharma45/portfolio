@@ -40,6 +40,12 @@ if ($skills_result->num_rows > 0) {
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#socials" class="nav-link">Socials</a></li>
             </ul>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
             <div class="admin-icon-container">
                 <a href="admin/login.php" class="admin-link" target="_blank">
                     <button class="btn-style"><img src="uploads/admin-icon.svg" alt="Admin" class="btn-icon"></button>
